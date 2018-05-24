@@ -16,6 +16,7 @@ known_prefixes = [
     "STM",
     "GLX",
     "GLS",
+    "LLC",
 ]
 
 
