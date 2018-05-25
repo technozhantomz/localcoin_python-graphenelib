@@ -48,12 +48,12 @@ class Base58(object):
         self._prefix = prefix
         if all(c in string.hexdigits for c in data):
             self._hex = data
+        elif data[:len(self._prefix)] == self._prefix:
+            self._hex = gphBase58CheckDecode(data[len(self._prefix):])
         elif data[0] == "5" or data[0] == "6":
             self._hex = base58CheckDecode(data)
         elif data[0] == "K" or data[0] == "L":
             self._hex = base58CheckDecode(data)[:-2]
-        elif data[:len(self._prefix)] == self._prefix:
-            self._hex = gphBase58CheckDecode(data[len(self._prefix):])
         else:
             raise ValueError("Error loading Base58 object")
 
