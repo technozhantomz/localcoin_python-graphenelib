@@ -11,12 +11,7 @@ PREFIX = "GPH"
 known_prefixes = [
     PREFIX,
     "BTS",
-    "MUSE",
-    "TEST",
-    "STM",
-    "GLX",
-    "GLS",
-    "LLC",
+    "KES",
 ]
 
 
